@@ -12,4 +12,9 @@ class Recipe extends Model
     protected $table = 'recipes'; // Define o nome da tabela associada ao modelo
 
     protected $fillable = ['name'];
+
+    public function recipe_ingredients()
+    {
+        return $this->hasMany(RecipeIngredients::class);
+    }
 }

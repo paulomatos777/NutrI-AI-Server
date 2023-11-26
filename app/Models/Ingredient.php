@@ -12,4 +12,9 @@ class Ingredient extends Model
     protected $table = 'ingredients';
 
     protected $fillable = ['name'];
+
+    public function recipe_ingredients()
+    {
+        return $this->hasMany(RecipeIngredients::class);
+    }
 }
